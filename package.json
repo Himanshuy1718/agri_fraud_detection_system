@@ -1,0 +1,68 @@
+{
+  "name": "agri-fraud-detection",
+  "version": "1.0.0",
+  "description": "Agriculture Fraud Detection and Investigation System",
+  "main": "server/server.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "client": "cd client && npm start",
+    "dev:full": "concurrently \"npm run dev\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "migrate": "node server/database/migrate.js",
+    "migrate:orders": "node server/database/migrateOrdersFeature.js",
+    "migrate:bootstrap": "node server/database/bootstrap.js",
+    "seed": "node server/database/seed.js",
+    "fraud:scan": "node server/jobs/fraudScan.js",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint server/**/*.js",
+    "deploy:aws": "npm run build && pm2 start ecosystem.config.js",
+    "postinstall": "node setup.js"
+  },
+  "keywords": [
+    "agriculture",
+    "fraud-detection",
+    "blockchain",
+    "supply-chain"
+  ],
+  "author": "ADBMS Team",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1505.0",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.9.0",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "ml-random-forest": "^2.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-cache": "^5.1.2",
+    "node-cron": "^3.0.3",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.18.0",
+    "pg": "^8.11.3",
+    "qrcode": "^1.5.3",
+    "sharp": "^0.33.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.2",
+    "pm2": "^5.3.0",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
