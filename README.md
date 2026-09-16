@@ -1,4 +1,4 @@
-# 🌾 Agriculture Fraud Detection System
+# 🌾 Agriculture Fraud Detection & Verification System
 
 A comprehensive web system for detecting and investigating fraud in agricultural supply chains, including certificate fraud, impossible travel times, double deliveries, and suspicious patterns.
 
