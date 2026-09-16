@@ -1,8 +1,8 @@
-# 🌾 Agriculture Fraud Detection & Verification System
+# Agriculture Fraud Detection & Verification System
 
 A comprehensive web system for detecting and investigating fraud in agricultural supply chains, including certificate fraud, impossible travel times, double deliveries, and suspicious patterns.
 
-## 🎯 Features
+## Features
 
 ### Core Functionality
 - **Certificate Management**: Issue and verify digital certificates with PDF upload and cryptographic hashing
@@ -22,7 +22,7 @@ A comprehensive web system for detecting and investigating fraud in agricultural
 6. **ML Anomaly Detection**: **Random Forest Classifier** trained on 1000+ data points to detect complex fraud patterns.
 7. **Excessive Certificates** (HIGH): Real-time trigger that flags batches with > 5 active certificates.
 
-## 🏗️ Architecture
+## Architecture
 
 ### Tech Stack
 - **Backend**: Node.js + Express.js
@@ -44,7 +44,7 @@ fraud_cases (id, flag_id, assigned_to, notes, decision, closed_at, created_at)
 audit_logs (id, user_id, action, entity_type, entity_id, metadata, created_at)
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+
@@ -95,7 +95,7 @@ cd client && npm start
 - Local Development: http://localhost:5000/api-docs
 - File Documentation: [API_DOCUMENTATION.md](./API_DOCUMENTATION.md)
 
-## 📦 Deployment
+## Deployment
 
 ### Docker Deployment
 ```bash
@@ -115,7 +115,7 @@ npm run deploy:aws
 - Set environment variables
 - Deploy automatically
 
-## 🔐 User Roles
+## User Roles
 
 1. **Inspector**: Issue certificates, upload PDFs
 2. **Transporter**: Update shipment status and events
@@ -123,7 +123,7 @@ npm run deploy:aws
 4. **Fraud Analyst**: Investigate flags, manage cases
 5. **Admin/Auditor**: Monitor system, view audit logs
 
-## 📊 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/auth/register` - Register new user
@@ -153,7 +153,7 @@ npm run deploy:aws
 - `PUT /api/cases/:id` - Update case
 - `POST /api/cases/:id/close` - Close case with decision
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -163,14 +163,14 @@ npm test
 npm run test:watch
 ```
 
-## 📈 Monitoring
+## Monitoring
 
 - **Application Logs**: Winston logging to files and console
 - **Database Monitoring**: PostgreSQL slow query logs
 - **Error Tracking**: Integrated error reporting
 - **Performance**: Request timing middleware
 
-## 🔒 Security Features
+## Security Features
 
 - Password hashing with bcrypt
 - JWT authentication
@@ -181,15 +181,15 @@ npm run test:watch
 - **Certificate Hash Verification**: SHA-256 integrity checks
 - **Idempotent DB**: Fail-safe migrations for persistent cloud hosting
 
-## 📝 License
+## License
 
 MIT License - See LICENSE file for details
 
-## 👥 Team
+## Team
 
 This project was developed as part of the Advanced Database Management Systems course.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/AmazingFeature`)
